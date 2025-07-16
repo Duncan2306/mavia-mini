@@ -1,0 +1,10 @@
+
+.container {
+  position: relative;
+
+  img {
+    width: 27rem;
+    aspect-ratio: 27 / 27;
+    object-fit: cover;
+  }
+}

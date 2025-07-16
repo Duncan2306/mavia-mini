@@ -1,0 +1,103 @@
+@use '../../styles/mixins/common' as *;
+
+.navigation {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-bottom: 1px solid #E2E3E9;
+  background: rgba(255, 255, 255, 0.50);
+  backdrop-filter: blur(10rem);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16.83px 101rem 14.69px 79.16rem;
+  width: 100%;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    padding: 16.83px 25rem 14.69px;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 16px 24.5rem;
+  }
+}
+
+.logo {
+  &:hover {
+    @include skeleton();
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+    width: 85.115rem;
+    aspect-ratio: 85.115 / 38.484;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 78rem;
+  width: 100%;
+  flex: 1;
+
+  @media screen and (min-width: 768px) and (max-width: 1023px) {
+    gap: 25rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  li {
+    color: #0E1426;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    transition: all 0.2s ease;
+
+    @media (min-width: 1440px) {
+      font-size: 14rem;
+    }
+
+    &:hover {
+      color: #209EFF;
+    }
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16rem;
+
+  .button {
+    width: 115rem;
+    height: 37rem;
+    flex-shrink: 0;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+      transform: scale(1.02);
+    }
+
+    &.discord {
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+    }
+  }
+}

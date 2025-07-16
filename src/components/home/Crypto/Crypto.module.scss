@@ -1,0 +1,268 @@
+$outside: polygon(
+  18rem 0%,
+  100% 0%,
+  103% 0%,
+  100% calc(100% - 8rem),
+  calc(100% - 8rem) 100%,
+  0% 100%,
+  0% 8rem,
+  8rem 0%
+);
+
+$inside: polygon(
+  18rem 0%,
+  100% 0%,
+  103% 0%,
+  100% calc(100% - 10rem),
+  calc(100% - 10rem) 100%,
+  0% 100%,
+  0% 10rem,
+  10rem 0%
+);
+
+$baseRadius: 8rem;
+
+.container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(14, 21, 36, 0.00) -0.47%, rgba(44, 91, 255, 0.30) 108.34%);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 55rem 130rem 72rem 190rem;
+  height: 100%;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding: 37rem 0 120rem;
+    gap: 29rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 51.74rem;
+
+  @media (max-width: 767px) {
+    margin-bottom: 0rem;
+  }
+
+  .title {
+    color: #0E1426;
+    font-size: 40rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: -0.8rem;
+
+    @media (max-width: 767px) {
+      font-size: 27rem;
+      line-height: 26rem;
+      letter-spacing: -0.54rem;
+      width: 200rem;
+      text-align: center;
+    }
+
+    &_highlight {
+      color: #209EFF;
+    }
+  }
+
+  .description {
+    color: #4F5360;
+    text-align: center;
+    font-size: 18rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 26rem;
+    letter-spacing: -0.36rem;
+
+    @media (max-width: 767px) {
+      font-size: 14px;
+      line-height: 24rem;
+      letter-spacing: -0.28rem;
+    }
+  }
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 488.5rem 1fr;
+  align-items: center;
+  gap: 35rem;
+  width: 100%;
+
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: normal;
+  }
+}
+
+.sliderOutside {
+  position: relative;
+  width: 100%;
+  height: 502rem;
+  border-radius: 4rem;
+
+  @media (max-width: 767px) {
+    height: 377.422rem;
+  }
+}
+
+.slider {
+  position: relative;
+  margin: 20rem;
+
+  @media (max-width: 767px) {
+    margin: 15rem 15rem 0rem;
+  }
+
+  :global {
+    .slick-dots {
+      bottom: -40rem;
+
+      @media (max-width: 767px) {
+        bottom: -35rem;
+      }
+
+      li {
+        button {
+          &::before {
+            content: '';
+            display: block;
+            width: 13rem;
+            height: 13rem;
+            border-radius: 50%;
+            background: #0F193E;
+          }
+        }
+
+        &.slick-active {
+          button {
+            &::before {
+              content: '';
+              display: block;
+              width: 13rem;
+              height: 13rem;
+              border-radius: 50%;
+              background: #FFC805;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+
+  img {
+    clip-path: $inside;
+    -webkit-clip-path: $inside;
+    border-radius: calc($baseRadius - 1rem);
+    width: 420rem;
+    height: 420rem;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+
+    @media (max-width: 767px) {
+      width: 320rem;
+      height: 320rem;
+    }
+  }
+}
+
+.introduceBox {
+  display: flex;
+  flex-direction: column;
+  gap: 20rem;
+
+  @media (max-width: 767px) {
+    padding: 0 22rem 0 36rem;
+    gap: 10rem;
+  }
+
+  .head {
+    display: flex;
+    align-items: center;
+    gap: 14rem;
+    width: 100%;
+
+    .lbl {
+      color: #0E1426;
+      font-size: 22rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      letter-spacing: -0.44rem;
+
+      &.active {
+        color: #209EFF;
+        font-weight: 700;
+      }
+
+      @media (max-width: 767px) {
+        font-size: 19rem;
+        letter-spacing: -0.38rem;
+      }
+    }
+  }
+}
+
+.subList {
+  flex-direction: column;
+  padding-left: 41rem;
+  display: none;
+
+  &.active {
+    display: flex;
+  }
+
+  .subItem {
+    display: flex;
+    align-items: center;
+    gap: 14rem;
+    opacity: 0;
+    animation: fadeInUp 0.5s ease both;
+
+    @media (max-width: 767px) {
+      line-height: 26rem;
+      width: 280rem;
+    }
+
+    &_lbl {
+      color: #4F5360;
+      font-size: 16rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 35rem;
+      letter-spacing: -0.32rem;
+
+      @media (max-width: 767px) {
+        line-height: 26rem;
+        width: 230rem;
+      }
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

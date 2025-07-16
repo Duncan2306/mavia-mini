@@ -1,0 +1,113 @@
+@use '../../../styles/mixins/common' as *;
+
+.container {
+  width: 100%;
+  background: linear-gradient(to left, rgba(14, 21, 36, 0.00) -0.47%, rgba(44, 91, 255, 0.30) 108.34%);
+  height: 517rem;
+
+  @media (max-width: 767px) {
+    height: auto;
+  }
+}
+
+.content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 0 105rem 0 212rem;
+  height: 100%;
+
+  @media (max-width: 767px) {
+    flex-direction: column-reverse;
+    gap: 33rem;
+    padding: 34rem 0 37rem;
+  }
+}
+
+.title {
+  width: 546rem;
+  color: #0E1426;
+  font-size: 40rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  @media (max-width: 767px) {
+    font-size: 27rem;
+    text-align: center;
+    width: 100%;
+  }
+
+  &_highlight {
+    color: #209EFF;
+  }
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 21rem;
+  max-width: 642rem;
+
+  .list {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    @media (max-width: 767px) {
+      padding: 0 40rem 0 45rem; 
+    }
+
+    &_item {
+      display: flex;
+      align-items: center;
+      gap: 13rem;
+
+      @media (max-width: 767px) {
+        gap: 9rem;
+      }
+
+      &_text {
+        color: #4F5360;
+        font-size: 18rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 35rem;
+        letter-spacing: -0.36rem;
+
+        @media (max-width: 767px) {
+          font-size: 14rem;
+          line-height: 24rem;
+          letter-spacing: -0.28rem;
+        }
+      }
+    }
+  }
+}
+
+.left {
+  position: absolute;
+  left: 212rem;
+  top: 50%;
+  transform: translateY(-50%);
+
+  @media (max-width: 767px) {
+    position: relative;
+    left: unset;
+    top: unset;
+    transform: unset;
+  }
+
+  img {
+    width: 405.549rem;
+    object-fit: cover;
+    aspect-ratio: 405.549 / 418;
+    @include animateFloatSquare(float, 15rem, 15s, ease-in-out);
+
+    @media (max-width: 767px) {
+      width: 303.662rem;
+      aspect-ratio: 303.6 / 315;
+    }
+  }
+}

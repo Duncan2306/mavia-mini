@@ -1,0 +1,18 @@
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-left: 80rem;
+  padding-right: 80rem;
+  max-width: 1680px;
+
+  @media screen and (min-width: 1024px) and (max-width: 1680px) {
+    padding-left: 150rem;
+    padding-right: 150rem;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding-left: 16rem;
+    padding-right: 16rem;
+  }
+}

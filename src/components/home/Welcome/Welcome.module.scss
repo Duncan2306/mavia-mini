@@ -1,0 +1,78 @@
+.container {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(14, 21, 36, 0.00) -0.47%, rgba(44, 91, 255, 0.30) 108.34%);
+}
+
+.content {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 61rem 245.03rem 130rem 259.17rem;
+  height: 100%;
+  gap: 62.22rem;
+
+  @media (max-width: 767px) {
+    flex-direction: column;
+    padding: 34rem 0 120rem;
+    gap: 37rem;
+  }
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15.26rem;
+
+  @media (max-width: 767px) {
+    gap: 8rem;
+  }
+}
+
+.title {
+  color: #0E1426;
+  font-size: 40rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+
+  @media (max-width: 767px) {
+    font-size: 27rem;
+    text-align: center;
+  }
+
+  &_highlight {
+    color: #209EFF;
+  }
+}
+
+.description {
+  color: #4F5360;
+  text-align: center;
+  font-feature-settings: 'salt' on, 'ss01' on, 'ss02' on, 'ss04' on;
+  font-size: 18rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26rem;
+  letter-spacing: -0.36rem;
+
+  @media (max-width: 767px) {
+    font-size: 14rem;
+    line-height: 24rem;
+  }
+}
+
+.iphone {
+  width: 935.802rem;
+  aspect-ratio: 935.802 / 474.522;
+  object-fit: cover;
+
+  @media (max-width: 767px) {
+    width: 342rem;
+    aspect-ratio: 342 / 186.11;
+  }
+}
