@@ -4,7 +4,5 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  server: {
-    allowedHosts: ['55cf126e8923.ngrok-free.app'],
-  },
+  base: '/mavia-mini/'
 })
