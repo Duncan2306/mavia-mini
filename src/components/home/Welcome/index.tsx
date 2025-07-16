@@ -7,6 +7,7 @@ import styles from './Welcome.module.scss'
 const Welcome = () => {
   return (
     <div
+      id="gameplay"
       className={styles.container}
       data-aos="flip-down"
       data-aos-duration="500"
@@ -21,7 +22,7 @@ const Welcome = () => {
           <p className={styles.description}>Where cute gets chaotic and crypto gets clever!</p>
         </header>
         
-        <img src="/images/home/iphone.png" alt="iphone" className={styles.iphone} />
+        <img src="./images/home/iphone.png" alt="iphone" className={styles.iphone} />
       </ContainerLayout>
     </div>
   )

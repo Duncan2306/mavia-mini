@@ -6,7 +6,7 @@ import styles from './BackedBy.module.scss'
 
 const BackedBy = () => {
   return (
-    <div className={styles.container}>
+    <div id="partner" className={styles.container}>
       <ContainerLayout className={styles.content}>
         <h2 className={styles.title}>Backed By</h2>
 
@@ -27,9 +27,9 @@ const BackedBy = () => {
 export default React.memo(BackedBy)
 
 const BACKED_BY_LIST = [
-  { icon: '/images/home/backed-by/hashkey.png', name: 'hashkey', link: '' },
-  { icon: '/images/home/backed-by/merit.png', name: 'merit', link: '' },
-  { icon: '/images/home/backed-by/guildfi.png', name: 'guildfi', link: '' },
-  { icon: '/images/home/backed-by/avocado.png', name: 'avocado', link: '' },
-  { icon: '/images/home/backed-by/ec-llc.png', name: 'ec-llc', link: '' }
+  { icon: './images/home/backed-by/hashkey.png', name: 'hashkey', link: '' },
+  { icon: './images/home/backed-by/merit.png', name: 'merit', link: '' },
+  { icon: './images/home/backed-by/guildfi.png', name: 'guildfi', link: '' },
+  { icon: './images/home/backed-by/avocado.png', name: 'avocado', link: '' },
+  { icon: './images/home/backed-by/ec-llc.png', name: 'ec-llc', link: '' }
 ]

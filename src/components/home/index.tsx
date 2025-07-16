@@ -21,12 +21,14 @@ const Home = () => {
       <Header />
       <BackedBy />
       <Crypto />
-      <Section1 />
-      <Section2 />
-      <Section3 />
-      <Section4 />
-      <Section5 />
-      <Section6 />
+      <div id="features" className={styles.features}>
+        <Section1 />
+        <Section2 />
+        <Section3 />
+        <Section4 />
+        <Section5 />
+        <Section6 />
+      </div>
       <Welcome />
       <Faq />
       <Contact />

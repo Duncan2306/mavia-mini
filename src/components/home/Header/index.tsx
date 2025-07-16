@@ -9,12 +9,13 @@ const Header = () => {
   const { isMobile } = useWindowSize()
 
   const bg = useMemo(() => {
-    if (isMobile) return '/images/home/header/hero-mobile.png'
-    return '/images/home/header/hero.png'
+    if (isMobile) return './images/home/header/hero-mobile.png'
+    return './images/home/header/hero.png'
   }, [isMobile])
 
   return (
     <div
+      id="home"
       className={styles.container}
       style={{ background: `url(${bg}) no-repeat center / 100%` }}
       data-aos="zoom-out-down"
@@ -46,7 +47,7 @@ const Header = () => {
 export default React.memo(Header)
 
 const STORE_LIST = [
-  { label: 'google', icon: '/images/home/header/google.png', link: '' },
-  { label: 'app', icon: '/images/home/header/apple.png', link: '' },
-  { label: 'nexira', icon: '/images/home/header/nexira-btn.png', link: '' }
+  { label: 'google', icon: './images/home/header/google.png', link: '' },
+  { label: 'app', icon: './images/home/header/apple.png', link: '' },
+  { label: 'nexira', icon: './images/home/header/nexira-btn.png', link: '' }
 ]

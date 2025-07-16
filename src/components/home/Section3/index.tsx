@@ -30,7 +30,7 @@ const Section3 = () => {
         </section>
 
         <section className={styles.right}>
-          <img src="/images/home/sections/3.png" alt="1" />
+          <img src="./images/home/sections/3.png" alt="1" />
         </section>
       </ContainerLayout>
     </div>

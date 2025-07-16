@@ -9,8 +9,8 @@ const Contact = () => {
   const { isMobile } = useWindowSize()
 
   const bg = useMemo(() => {
-    if (isMobile) return '/images/home/contact/contact-mobile.png'
-    return '/images/home/contact/contact.png'
+    if (isMobile) return './images/home/contact/contact-mobile.png'
+    return './images/home/contact/contact.png'
   }, [isMobile])
 
   return (
@@ -36,7 +36,7 @@ const Contact = () => {
           </p>
         )}
 
-        <img src={'/images/home/contact/join.png'} alt={'join'} className={styles.joinBtn} />
+        <img src={'./images/home/contact/join.png'} alt={'join'} className={styles.joinBtn} />
       </ContainerLayout>
     </div>
   )

@@ -10,7 +10,7 @@ const Footer = () => {
       <ContainerLayout className={styles.container}>
         <section className={styles.left}>
           <a href="/" className={styles.logo}>
-            <img src="/images/logo-white.png" alt="Mavia" />
+            <img src="./images/logo-white.png" alt="Mavia" />
           </a>
           <span className={styles.copyright}>© Copyright 2025 Mavia Mini. All rights reserved</span>
         </section>
@@ -48,8 +48,8 @@ const MENU = [
 ]
 
 const SOCIALS = [
-  { label: 'Discord', href: '/', icon: '/images/footer/discord.png' },
-  { label: 'Twitter', href: '/', icon: '/images/footer/twitter.png' },
-  { label: 'Gate', href: '/', icon: '/images/footer/gate.png' },
-  { label: 'Duck', href: '/', icon: '/images/footer/duck.png' },
+  { label: 'Discord', href: '/', icon: './images/footer/discord.png' },
+  { label: 'Twitter', href: '/', icon: './images/footer/twitter.png' },
+  { label: 'Gate', href: '/', icon: './images/footer/gate.png' },
+  { label: 'Duck', href: '/', icon: './images/footer/duck.png' },
 ]

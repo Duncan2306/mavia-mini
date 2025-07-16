@@ -5,7 +5,7 @@ import styles from './GoldStar.module.scss'
 const GoldStar = () => {
   return (
     <div className={styles.container}>
-      <img src="/images/gold-star.png" alt="gold-star" />
+      <img src="./images/gold-star.png" alt="gold-star" />
     </div>
   )
 }

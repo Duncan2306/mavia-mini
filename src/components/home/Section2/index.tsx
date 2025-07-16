@@ -15,7 +15,7 @@ const Section2 = () => {
     >
       <ContainerLayout className={styles.content}>
         <section className={styles.left}>
-          <img src="/images/home/sections/2.png" alt="1" />
+          <img src="./images/home/sections/2.png" alt="1" />
         </section>
 
         <section className={styles.right}>

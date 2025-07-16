@@ -51,7 +51,7 @@ const Crypto = () => {
         <div className={styles.box}>
           <section
             className={styles.sliderOutside}
-            style={{ background: 'url(/images/home/crypto/box-slider.png) no-repeat center / 100%' }}
+            style={{ background: 'url(./images/home/crypto/box-slider.png) no-repeat center / 100%' }}
           >
             <Slider {...settings} className={styles.slider}>
               {SLIDER.map((item, index) => (
@@ -102,12 +102,12 @@ const Crypto = () => {
 export default React.memo(Crypto)
 
 const SLIDER = [
-  { image: '/images/home/crypto/1.png' },
-  { image: '/images/home/crypto/2.png' },
-  { image: '/images/home/crypto/3.png' },
-  { image: '/images/home/crypto/4.png' },
-  { image: '/images/home/crypto/5.png' },
-  { image: '/images/home/crypto/6.png' }
+  { image: './images/home/crypto/1.png' },
+  { image: './images/home/crypto/2.png' },
+  { image: './images/home/crypto/3.png' },
+  { image: './images/home/crypto/4.png' },
+  { image: './images/home/crypto/5.png' },
+  { image: './images/home/crypto/6.png' }
 ]
 
 const INTRODUCE = [

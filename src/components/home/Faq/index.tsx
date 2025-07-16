@@ -13,11 +13,11 @@ const Faq = () => {
   const { isMobile } = useWindowSize()
 
   return (
-    <div className={styles.container}>
-      <img src="/images/home/faq/sticker.png" alt="sticker" className={styles.sticker} />
+    <div id="faq" className={styles.container}>
+      <img src="./images/home/faq/sticker.png" alt="sticker" className={styles.sticker} />
       <ContainerLayout className={styles.content}>
         {isMobile ? <h2 className={styles.faqBox_title}>FAQ</h2> : null}
-        <img src="/images/home/faq/girl-ruby.png" alt="hero" className={styles.hero} />
+        <img src="./images/home/faq/girl-ruby.png" alt="hero" className={styles.hero} />
 
         <section className={styles.faqBox}>
           {isMobile ? null : <h2 className={styles.faqBox_title}>FAQ</h2>}
