@@ -2,12 +2,7 @@
 
 .container {
   width: 100%;
-  background: linear-gradient(to right, rgba(14, 21, 36, 0.00) -0.47%, rgba(44, 91, 255, 0.30) 108.34%);
-  height: 517rem;
-
-  @media (max-width: 767px) {
-    height: auto;
-  }
+  height: 50vh;
 }
 
 .content {

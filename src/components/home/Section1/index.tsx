@@ -9,9 +9,9 @@ const Section1 = () => {
   return (
     <div
       className={styles.container}
-      data-aos="fade-up-right"
-      data-aos-duration="500"
-      data-aos-once="true"
+      // data-aos="fade-up-right"
+      // data-aos-duration="500"
+      // data-aos-once="true"
     >
       <ContainerLayout className={styles.content}>
         <section className={styles.left}>

@@ -7,12 +7,7 @@ import styles from './Section2.module.scss'
 
 const Section2 = () => {
   return (
-    <div
-      className={styles.container}
-      data-aos="fade-up-left"
-      data-aos-duration="500"
-      data-aos-once="true"
-    >
+    <div className={styles.container}>
       <ContainerLayout className={styles.content}>
         <section className={styles.left}>
           <img src="./images/home/sections/2.png" alt="1" />

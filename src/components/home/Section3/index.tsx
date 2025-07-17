@@ -7,12 +7,7 @@ import styles from './Section3.module.scss'
 
 const Section3 = () => {
   return (
-    <div
-      className={styles.container}
-      data-aos="fade-up-right"
-      data-aos-duration="500"
-      data-aos-once="true"
-    >
+    <div className={styles.container}>
       <ContainerLayout className={styles.content}>
         <section className={styles.left}>
           <h2 className={styles.title}>

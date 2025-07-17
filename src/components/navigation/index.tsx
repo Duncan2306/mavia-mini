@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
 
 import ContainerLayout from '../../layout/container'
@@ -6,8 +6,43 @@ import ContainerLayout from '../../layout/container'
 import styles from './navigation.module.scss'
 
 const Navigation = () => {
+  const [scrollDir, setScrollDir] = useState('up')
+  const lastScroll = useRef(0)
+  const headerRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    lastScroll.current = window.scrollY
+    function onScroll() {
+      if (window.scrollY > 70) {
+        if (window.scrollY >= lastScroll.current) {
+          setScrollDir('down')
+        } else {
+          setScrollDir('up')
+        }
+      } else {
+        setScrollDir('up')
+      }
+      lastScroll.current = window.scrollY
+    }
+    window.addEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+    }
+  }, [])
+
+  useEffect(() => {
+    if (!headerRef.current) {
+      return
+    }
+    if (scrollDir === 'down') {
+      headerRef.current.style.transform = 'translateY(-100%)'
+    } else {
+      headerRef.current.style.transform = 'translateY(0%)'
+    }
+  }, [scrollDir])
+
   return (
-    <nav className={styles.navigation}>
+    <nav ref={headerRef} className={styles.navigation}>
       <ContainerLayout className={styles.container}>
         <a href="/" className={styles.logo}>
           <img src="./images/logo.png" alt="Mavia" />

@@ -22,12 +22,24 @@ const Home = () => {
       <BackedBy />
       <Crypto />
       <div id="features" className={styles.features}>
-        <Section1 />
-        <Section2 />
-        <Section3 />
-        <Section4 />
-        <Section5 />
-        <Section6 />
+        <SectionBox direction="right">
+          <Section1 />
+        </SectionBox>
+        <SectionBox direction="left">
+          <Section2 />
+        </SectionBox>
+        <SectionBox direction="right">
+          <Section3 />
+        </SectionBox>
+        <SectionBox direction="left">
+          <Section4 />
+        </SectionBox>
+        <SectionBox direction="right">
+          <Section5 />
+        </SectionBox>
+        <SectionBox direction="left">
+          <Section6 />
+        </SectionBox>
       </div>
       <Welcome />
       <Faq />
@@ -37,3 +49,16 @@ const Home = () => {
 }
 
 export default React.memo(Home)
+
+const SectionBox = ({ children }: { children: React.ReactNode, direction: 'left' | 'right' }) => {
+  return (
+    <div
+      className={styles.features_item}
+      // data-aos={`fade-up-right`}
+      // data-aos-duration="500"
+      // data-aos-once="true"
+    >
+      {children}
+    </div>
+  )
+}
