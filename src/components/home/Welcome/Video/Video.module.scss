@@ -1,0 +1,45 @@
+.container {
+  position: relative;
+  width: 929rem;
+  aspect-ratio: 929 / 446;
+  object-fit: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15rem;
+  
+  @media (max-width: 767px) {
+    width: 342rem;
+    aspect-ratio: 342 / 164.189;
+    padding: 5rem;
+  }
+}
+
+.video {
+  border-radius: calc(47.19rem - 15rem);
+  aspect-ratio: 895.256 / 410.46;
+  border: 1rem solid #989892;
+
+  @media (max-width: 767px) {
+    border-radius: 15rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}

@@ -1,7 +1,10 @@
 .container {
   width: 100%;
-  height: 100%;
-  background: linear-gradient(to top, rgba(14, 21, 36, 0.00) -0.47%, rgba(44, 91, 255, 0.30) 108.34%);
+  height: 888rem;
+
+  @media (max-width: 767px) {
+    height: 476rem;
+  }
 }
 
 .content {
@@ -10,18 +13,20 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 61rem 245.03rem 130rem 259.17rem;
+  padding: 0 255rem 0;
   height: 100%;
-  gap: 62.22rem;
+  gap: 41rem;
 
   @media (max-width: 767px) {
     flex-direction: column;
-    padding: 34rem 0 120rem;
+    padding: 0;
     gap: 37rem;
   }
 }
 
 .header {
+  position: absolute;
+  top: 61rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,6 +35,7 @@
 
   @media (max-width: 767px) {
     gap: 8rem;
+    top: 52rem;
   }
 }
 
@@ -66,13 +72,54 @@
   }
 }
 
-.iphone {
-  width: 935.802rem;
-  aspect-ratio: 935.802 / 474.522;
-  object-fit: cover;
+.mediaBox {
+  position: relative;
+  width: 100%;
+}
+
+.video {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 1500ms ease-in-out;
 
   @media (max-width: 767px) {
-    width: 342rem;
-    aspect-ratio: 342 / 186.11;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.iphoneRotate {
+  animation: iphoneRotate 1.5s ease-in-out forwards;
+}
+
+.iphoneScaleDown {
+  animation: iphoneScaleDown 1.5s ease-in-out forwards;
+}
+
+.slider {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 1500ms ease-in-out;
+}
+
+@keyframes iphoneRotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(90deg);
+  }
+}
+
+@keyframes iphoneScaleDown {
+  from {
+    opacity: 1;
+    transform: rotate(90deg) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: rotate(90deg) scale(0);
   }
 }

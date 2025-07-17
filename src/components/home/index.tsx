@@ -22,6 +22,7 @@ const Home = () => {
       <BackedBy />
       <Crypto />
       <div id="features" className={styles.features}>
+        {/* <img src="./images/scroll.png" alt="features" className={styles.scroll} /> */}
         <SectionBox direction="right">
           <Section1 />
         </SectionBox>

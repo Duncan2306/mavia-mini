@@ -1,0 +1,104 @@
+.container {
+  width: 100%;
+
+  @media (max-width: 767px) {
+    padding-top: 20rem;
+  }
+
+  :global {
+    .slick-list {
+      width: 100%;
+      height: 100%;
+
+      .slick-track {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .slick-slide {
+      width: 100% !important;
+      height: 100% !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .slick-slide.slick-active.slick-current {
+      img {
+        position: relative;
+        width: 302.874rem;
+        height: 538rem;
+        aspect-ratio: 302.874 / 538;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.item {
+  position: relative;
+  width: 100%;
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+  }
+}
+
+.image {
+  width: 178.005rem;
+  height: 317.486rem;
+  aspect-ratio: 178.005 / 317.486;
+  transition: all 0.3s ease;
+
+  @media (max-width: 767px) {
+    width: 130rem !important;
+    height: 232rem !important;
+    aspect-ratio: 130 / 232 !important;
+  }
+}
+
+.prevArrow {
+  width: 49.151rem;
+  height: 49.151rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+
+  position: absolute;
+  left: 27%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  @media (max-width: 767px) {
+    left: 40.16rem;
+    width: 40rem;
+    height: 40rem;
+  }
+}
+
+.nextArrow {
+  width: 49.151rem;
+  height: 49.151rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  cursor: pointer;
+
+  position: absolute;
+  right: 27%;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  @media (max-width: 767px) {
+    right: 40.16rem;
+    width: 40rem;
+    height: 40rem;
+  }
+}

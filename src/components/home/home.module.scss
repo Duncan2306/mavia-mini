@@ -36,4 +36,13 @@
     scroll-snap-align: center;
     scroll-snap-stop: always;
   }
+
+  .scroll {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 78rem;
+    height: 78rem;
+    aspect-ratio: 1/1;
+  }
 }
