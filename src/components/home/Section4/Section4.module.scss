@@ -15,8 +15,7 @@
 
   @media (max-width: 767px) {
     flex-direction: column-reverse;
-    gap: 33rem;
-    padding: 34rem 0 44rem;
+    padding: 20rem 0;
   }
 }
 
@@ -46,14 +45,15 @@
   gap: 21rem;
   max-width: 642rem;
 
+  @media (max-width: 767px) {
+    gap: 10rem;
+    padding: 0 24rem;
+  }
+
   .list {
     display: flex;
     flex-direction: column;
     gap: 5rem;
-
-    @media (max-width: 767px) {
-      padding: 0 40rem 0 45rem; 
-    }
 
     &_item {
       display: flex;
@@ -102,8 +102,8 @@
     @include animateFloatSquare(float, 15rem, 15s, ease-in-out);
 
     @media (max-width: 767px) {
-      width: 259.126rem;
-      aspect-ratio: 259.1 / 341;
+      width: 154.26rem;
+      aspect-ratio: 154.26 / 203;
     }
   }
 }
