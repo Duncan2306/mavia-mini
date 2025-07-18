@@ -27,6 +27,7 @@ export function useScrollDirectionOnHover(element: string) {
     }
 
     const handleTouchMove = (e: TouchEvent) => {
+      e.preventDefault()
       if (touchStartY.current === null) return
       const currentY = e.touches[0].clientY
       const deltaY = currentY - touchStartY.current
