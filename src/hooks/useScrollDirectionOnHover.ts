@@ -13,7 +13,7 @@ export function useScrollDirectionOnHover(element: string) {
     if (!target) return
 
     const handleWheel = (e: WheelEvent) => {
-      // e.preventDefault()
+      e.preventDefault()
       if ((e.deltaY) > 1) {
         setDirection('down')
       } else if ((e.deltaY) < -1) {
@@ -41,9 +41,9 @@ export function useScrollDirectionOnHover(element: string) {
       }
     }
 
-    target.addEventListener('wheel', handleWheel, { passive: true })
-    target.addEventListener('touchstart', handleTouchStart, { passive: true })
-    target.addEventListener('touchmove', handleTouchMove, { passive: true })
+    target.addEventListener('wheel', handleWheel, { passive: false })
+    target.addEventListener('touchstart', handleTouchStart, { passive: false })
+    target.addEventListener('touchmove', handleTouchMove, { passive: false })
 
     return () => {
       target.removeEventListener('wheel', handleWheel)
