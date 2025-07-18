@@ -49,6 +49,7 @@
     line-height: 38rem;
     letter-spacing: -0.84rem;
     margin-bottom: 6rem;
+    text-align: center;
   }
 }
 
@@ -80,11 +81,22 @@
 
   @media screen and (max-width: 767px) {
     gap: 12rem;
-    max-width: 322rem;
     flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto auto;
   }
 
   li {
+    @media screen and (max-width: 767px) {
+      &:last-child {
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+
     &:hover {
       .storeIcon {
         transform: scale(1.05);
