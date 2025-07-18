@@ -2,7 +2,11 @@
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 517rem;
+
+  @media (max-width: 767px) {
+    height: 50vh;
+  }
 }
 
 .content {
