@@ -1,4 +1,4 @@
-@use '../../../styles/mixins/common' as *;
+@use '../../../../styles/mixins/common' as *;
 
 .container {
   width: 100%;
@@ -9,11 +9,12 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 136rem 0 231rem;
+  justify-content: flex-end;
+  padding: 0 105rem 0 212rem;
   height: 100%;
 
   @media (max-width: 767px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 20rem 0;
   }
 }
@@ -37,7 +38,7 @@
   }
 }
 
-.left {
+.right {
   display: flex;
   flex-direction: column;
   gap: 21rem;
@@ -80,28 +81,28 @@
   }
 }
 
-.right {
+.left {
   position: absolute;
-  right: 136rem;
+  left: 212rem;
   top: 50%;
   transform: translateY(-50%);
 
   @media (max-width: 767px) {
     position: relative;
-    right: unset;
+    left: unset;
     top: unset;
     transform: unset;
   }
 
   img {
-    width: 520rem;
+    width: 405.549rem;
     object-fit: cover;
-    aspect-ratio: 520 / 492;
+    aspect-ratio: 405.549 / 418;
     @include animateFloatSquare(float, 15rem, 15s, ease-in-out);
 
     @media (max-width: 767px) {
-      width: 218rem;
-      aspect-ratio: 218 / 206.483 ;
+      width: 205.334rem;
+      aspect-ratio: 205.334 / 213;
     }
   }
 }

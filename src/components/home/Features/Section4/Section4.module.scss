@@ -1,4 +1,4 @@
-@use '../../../styles/mixins/common' as *;
+@use '../../../../styles/mixins/common' as *;
 
 .container {
   width: 100%;
@@ -9,11 +9,12 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 0 120.55rem 0 191rem;
+  justify-content: flex-end;
+  padding: 0 98rem 0 261rem;
   height: 100%;
 
   @media (max-width: 767px) {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 20rem 0;
   }
 }
@@ -30,6 +31,7 @@
     font-size: 27rem;
     text-align: center;
     width: 100%;
+    padding: 0 25rem;
   }
 
   &_highlight {
@@ -37,11 +39,11 @@
   }
 }
 
-.left {
+.right {
   display: flex;
   flex-direction: column;
   gap: 21rem;
-  max-width: 628rem;
+  max-width: 642rem;
 
   @media (max-width: 767px) {
     gap: 10rem;
@@ -80,28 +82,28 @@
   }
 }
 
-.right {
+.left {
   position: absolute;
-  right: 120.55rem;
+  left: 261rem;
   top: 50%;
   transform: translateY(-50%);
 
   @media (max-width: 767px) {
     position: relative;
-    right: unset;
+    left: unset;
     top: unset;
     transform: unset;
   }
 
   img {
-    width: 466.374rem;
+    width: 331rem;
     object-fit: cover;
-    aspect-ratio: 466.374 / 465;
+    aspect-ratio: 331 / 438;
     @include animateFloatSquare(float, 15rem, 15s, ease-in-out);
 
     @media (max-width: 767px) {
-      width: 218rem;
-      aspect-ratio: 218 / 204.068;
+      width: 154.26rem;
+      aspect-ratio: 154.26 / 203;
     }
   }
 }

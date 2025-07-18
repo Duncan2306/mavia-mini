@@ -1,7 +1,7 @@
 import React from 'react'
 
-import ContainerLayout from '../../../layout/container'
-import Diamond from '../../../components/Icons/Diamond'
+import ContainerLayout from '../../../../layout/container'
+import Diamond from '../../../Icons/Diamond'
 
 import styles from './Section1.module.scss'
 

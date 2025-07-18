@@ -1,4 +1,4 @@
-@use '../../../styles/mixins/common' as *;
+@use '../../../../styles/mixins/common' as *;
 
 .container {
   width: 100%;
@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  padding: 0 105rem 0 212rem;
+  padding: 0 98rem 0 212rem;
   height: 100%;
 
   @media (max-width: 767px) {
@@ -95,14 +95,14 @@
   }
 
   img {
-    width: 405.549rem;
+    width: 428.523rem;
     object-fit: cover;
-    aspect-ratio: 405.549 / 418;
+    aspect-ratio: 428.523 / 469;
     @include animateFloatSquare(float, 15rem, 15s, ease-in-out);
 
     @media (max-width: 767px) {
-      width: 205.334rem;
-      aspect-ratio: 205.334 / 213;
+      width: 195.953rem;
+      aspect-ratio: 195.953 / 217;
     }
   }
 }

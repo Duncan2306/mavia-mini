@@ -8,6 +8,12 @@
   height: 100%;
 }
 
+.featureWrapper {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
 .features {
   position: relative;
   background: linear-gradient(to left, rgba(14, 21, 36, 0.00) -0.47%, rgba(44, 91, 255, 0.30) 108.34%);
@@ -23,8 +29,13 @@
   gap: 100vh;
 
   @media (max-width: 767px) {
-    height: 580rem;
-    max-height: 580rem;
+    flex-direction: row;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 100%;
+    max-height: 100%;
+    gap: 100vw;
   }
 
   &::-webkit-scrollbar {
@@ -35,14 +46,38 @@
     height: 100vh;
     scroll-snap-align: center;
     scroll-snap-stop: always;
-  }
 
-  .scroll {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 78rem;
-    height: 78rem;
-    aspect-ratio: 1/1;
+    @media (max-width: 767px) {
+      flex: none;
+      width: 100vw;
+      height: 100%;
+    }
+  }
+}
+
+.scroll {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 34rem;
+  height: 52rem;
+  aspect-ratio: 34 / 52;
+  animation: bounceDown 1.2s ease-in-out infinite;
+}
+
+@keyframes bounceDown {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  30% {
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
