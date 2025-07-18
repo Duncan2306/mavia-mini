@@ -24,22 +24,27 @@ $baseRadius: 8rem;
 
 .container {
   width: 100%;
-  height: 100%;
+  height: 760rem;
   background: linear-gradient(to top, rgba(14, 21, 36, 0.00) -0.47%, rgba(44, 91, 255, 0.30) 108.34%);
+
+  @media (max-width: 767px) {
+    height: 944rem;
+  }
 }
 
 .content {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  padding: 55rem 130rem 72rem 190rem;
+  // padding: 55rem 130rem 72rem 190rem;
+  padding: 55rem 0 72rem 0;
   height: 100%;
 
   @media (max-width: 767px) {
     flex-direction: column;
-    padding: 37rem 0 37rem;
+    padding: 37rem 0;
     gap: 27rem;
   }
 }
@@ -95,16 +100,24 @@ $baseRadius: 8rem;
 }
 
 .box {
+  position: absolute;
+  top: 188rem;
+  left: 190rem;
+  right: 130rem;
+
   display: grid;
   grid-template-columns: 488.5rem 1fr;
   align-items: center;
   gap: 35rem;
-  width: 100%;
 
   @media (max-width: 767px) {
     display: flex;
     flex-direction: column;
     gap: 26rem;
+    width: 100%;
+    top: 149rem;
+    left: 0;
+    right: 0;
   }
 }
 
