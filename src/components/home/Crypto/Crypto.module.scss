@@ -39,8 +39,8 @@ $baseRadius: 8rem;
 
   @media (max-width: 767px) {
     flex-direction: column;
-    padding: 37rem 0 0;
-    gap: 29rem;
+    padding: 37rem 0 37rem;
+    gap: 27rem;
   }
 }
 
@@ -87,7 +87,7 @@ $baseRadius: 8rem;
     letter-spacing: -0.36rem;
 
     @media (max-width: 767px) {
-      font-size: 14px;
+      font-size: 14rem;
       line-height: 24rem;
       letter-spacing: -0.28rem;
     }
@@ -103,8 +103,8 @@ $baseRadius: 8rem;
 
   @media (max-width: 767px) {
     display: flex;
-    flex-direction: column-reverse;
-    align-items: normal;
+    flex-direction: column;
+    gap: 26rem;
   }
 }
 
@@ -187,7 +187,7 @@ $baseRadius: 8rem;
   gap: 20rem;
 
   @media (max-width: 767px) {
-    padding: 0 22rem 0 36rem;
+    padding: 0 24rem 0;
     gap: 10rem;
   }
 
@@ -196,6 +196,10 @@ $baseRadius: 8rem;
     align-items: center;
     gap: 14rem;
     width: 100%;
+
+    @media (max-width: 767px) {
+      gap: 10rem;
+    }
 
     .lbl {
       color: #0E1426;
@@ -223,6 +227,10 @@ $baseRadius: 8rem;
   padding-left: 41rem;
   display: none;
 
+  @media (max-width: 767px) {
+    padding-left: 35rem;
+  }
+
   &.active {
     display: flex;
   }
@@ -249,7 +257,7 @@ $baseRadius: 8rem;
 
       @media (max-width: 767px) {
         line-height: 26rem;
-        width: 230rem;
+        width: 100%;
       }
     }
   }

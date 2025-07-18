@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import clsx from "clsx"
 
 import ContainerLayout from "../../../layout/container"
+import useWindowSize from "../../../hooks/useWindowSize"
 import BlackStar from "../../Icons/BlackStar"
 import GoldStar from "../../Icons/GoldStar"
 import Diamond from "../../Icons/Diamond"
@@ -12,6 +13,8 @@ import Diamond from "../../Icons/Diamond"
 import styles from './Crypto.module.scss'
 
 const Crypto = () => {
+  const { isMobile } = useWindowSize()
+
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const getIndex = useCallback((index: number) => {
@@ -61,25 +64,25 @@ const Crypto = () => {
           </section>
 
           <section className={styles.introduceBox}>
-            {INTRODUCE.map((item, index) => (
-              <article key={index} className={styles.introduceItem}>
+            {isMobile ? (
+              <article className={styles.introduceItem}>
                 <div className={styles.head}>
-                  {currentIndex === index ? <GoldStar /> : <BlackStar />}
+                  <GoldStar />
                   <p
                     className={clsx(styles.lbl, {
-                      [styles.active]: currentIndex === index
+                      [styles.active]: true
                     })}
                   >
-                    {item.heading}
+                    {INTRODUCE[currentIndex].heading}
                   </p>
                 </div>
 
                 <ul
                   className={clsx(styles.subList, {
-                    [styles.active]: currentIndex === index
+                    [styles.active]: true
                   })}
                 >
-                  {item.sub.map((sub, index) => (
+                  {INTRODUCE[currentIndex].sub.map((sub, index) => (
                     <li
                       key={index}
                       className={styles.subItem}
@@ -91,7 +94,39 @@ const Crypto = () => {
                   ))}
                 </ul>
               </article>
-            ))}
+            ) : (
+              INTRODUCE.map((item, index) => (
+                <article key={index} className={styles.introduceItem}>
+                  <div className={styles.head}>
+                    {currentIndex === index ? <GoldStar /> : <BlackStar />}
+                    <p
+                      className={clsx(styles.lbl, {
+                        [styles.active]: currentIndex === index
+                      })}
+                    >
+                      {item.heading}
+                    </p>
+                  </div>
+  
+                  <ul
+                    className={clsx(styles.subList, {
+                      [styles.active]: currentIndex === index
+                    })}
+                  >
+                    {item.sub.map((sub, index) => (
+                      <li
+                        key={index}
+                        className={styles.subItem}
+                        style={{ animationDelay: `${index * 0.3}s`, animationFillMode: "forwards" }}
+                      >
+                        <Diamond />
+                        <span className={styles.subItem_lbl}>{sub}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </article>
+              ))
+            )}
           </section>
         </div>
       </ContainerLayout>
