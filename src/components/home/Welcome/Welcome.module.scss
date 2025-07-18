@@ -78,48 +78,13 @@
 }
 
 .video {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: opacity 2000ms ease-in-out;
-
-  @media (max-width: 767px) {
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-.iphoneRotate {
-  animation: iphoneRotate 1.5s ease-in-out forwards;
-}
-
-.iphoneScaleDown {
-  animation: iphoneScaleDown 1.5s ease-in-out forwards;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .slider {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: opacity 2000ms ease-in-out;
-}
-
-@keyframes iphoneRotate {
-  from {
-    transform: rotate(0);
-  }
-  to {
-    transform: rotate(90deg);
-  }
-}
-
-@keyframes iphoneScaleDown {
-  from {
-    opacity: 1;
-    transform: rotate(90deg) scale(1);
-  }
-  to {
-    opacity: 0;
-    transform: rotate(90deg) scale(0);
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
