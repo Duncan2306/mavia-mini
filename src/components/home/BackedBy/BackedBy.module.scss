@@ -4,6 +4,10 @@
   width: 100%;
   background: #209EFF;
   padding: 37rem 0 29rem;
+
+  @media screen and (max-width: 767px) {
+    padding: 27rem 0 23rem;
+  }
 }
 
 .content {
@@ -15,7 +19,7 @@
   gap: 9rem;
 
   @media screen and (max-width: 767px) {
-    padding: 0 29.45rem;
+    padding: 0 24rem;
   }
 }
 
@@ -26,25 +30,36 @@
   font-weight: 700;
   line-height: normal;
   letter-spacing: -0.8rem;
+
+  @media screen and (max-width: 767px) {
+    font-size: 30rem;
+    letter-spacing: -0.6rem;
+  }
+}
+
+.scroll {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  user-select: none;
+  width: 1140rem;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 20%, black 80%, transparent);
+
+  @media screen and (max-width: 767px) {
+    width: 328rem;
+  }
+
+  &:hover {
+    .marquee {
+      animation-play-state: paused;
+      -webkit-animation-play-state: paused;
+      -moz-animation-play-state: paused;
+    }
+  }
 }
 
 .list {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(196rem, 1fr));
-  align-items: center;
-  gap: 40rem;
-
-  @media screen and (max-width: 767px) {
-    grid-template-columns: repeat(2, minmax(158rem, 1fr));
-    gap: 12rem;
-  }
-
-  li {
-    // &:hover {
-    //   @include skeleton();
-    // }
-  }
-
   .icon {
     width: 196rem;
     aspect-ratio: 196 / 84;
@@ -54,5 +69,35 @@
       width: 158rem;
       aspect-ratio: 158 / 67.714;
     }
+  }
+}
+
+.marquee {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-shrink: 0;
+  gap: 15rem;
+
+  animation-play-state: running;
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+
+  animation: scroll 15s linear infinite;
+  -webkit-animation: scroll 15s linear infinite;
+  -moz-animation: scroll 15s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-100% - 15rem));
+    -webkit-transform: translateX(calc(-100% - 15rem));
+    -moz-transform: translateX(calc(-100% - 15rem));
   }
 }

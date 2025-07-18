@@ -1,4 +1,5 @@
 import React from 'react'
+import clsx from 'clsx'
 
 import ContainerLayout from '../../../layout/container'
 
@@ -10,15 +11,26 @@ const BackedBy = () => {
       <ContainerLayout className={styles.content}>
         <h2 className={styles.title}>Backed By</h2>
 
-        <ul className={styles.list}>
-          {BACKED_BY_LIST.map((item) => (
-            <li key={item.name}>
-              <a href={item.link} target="_blank" rel="noopener noreferrer">
-                <img src={item.icon} alt={item.name} className={styles.icon} />
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className={styles.scroll}>
+          <ul className={clsx(styles.list, styles.marquee)}>
+            {BACKED_BY_LIST.map((item) => (
+              <li key={item.name}>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <img src={item.icon} alt={item.name} className={styles.icon} />
+                </a>
+              </li>
+            ))}
+          </ul>
+          <ul className={clsx(styles.list, styles.marquee)}>
+            {BACKED_BY_LIST.map((item) => (
+              <li key={item.name}>
+                <a href={item.link} target="_blank" rel="noopener noreferrer">
+                  <img src={item.icon} alt={item.name} className={styles.icon} />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </ContainerLayout>
     </div>
   )
