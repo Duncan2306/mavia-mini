@@ -24,15 +24,14 @@ const Contact = () => {
         {isMobile ? (
           <p className={styles.description}>
             Be part of the chaos, cuteness, and crypto strategy!<br />
-            👉 [Join Now] and connect with fellow players, get early updates, sneak peeks, and exclusive rewards!<br />
-            💬 Mini Mavia — where the chibi warriors never sleep!
+            Join Now and connect with fellow players, get early<br/>
+            updates, sneak peeks, and exclusive rewards!<br/>
+            Mini Mavia — where the chibi warriors never sleep!
           </p>
         ) : (
           <p className={styles.description}>
             Be part of the chaos, cuteness, and crypto strategy!<br />
-            👉 [Join Now] and connect with fellow players, get early updates,<br />
-            sneak peeks, and exclusive rewards!<br />
-            💬 Mini Mavia — where the chibi warriors never sleep!
+            Join Now and connect with fellow players, get early updates, <br/> sneak peeks, and exclusive rewards!
           </p>
         )}
 
