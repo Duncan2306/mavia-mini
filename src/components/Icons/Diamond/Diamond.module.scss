@@ -1,5 +1,8 @@
 .container {
-  svg {
+  img {
+    width: 16rem;
     min-width: 16rem;
+    aspect-ratio: 16 / 16;
+    object-fit: cover;
   }
 }
