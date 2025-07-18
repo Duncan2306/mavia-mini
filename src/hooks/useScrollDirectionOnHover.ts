@@ -23,6 +23,7 @@ export function useScrollDirectionOnHover(element: string) {
 
 
     const handleTouchStart = (e: TouchEvent) => {
+      e.preventDefault()
       touchStartY.current = e.touches[0].clientY
     }
 
