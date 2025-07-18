@@ -30,7 +30,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 150rem 0 172rem;
+  padding: 0 150rem 0;
   height: 100%;
 
   @media (max-width: 767px) {
@@ -39,14 +39,14 @@
     justify-content: flex-start;
     padding: 0;
     padding: 27rem 0 54rem;
-    gap: 37rem;
+    gap: 20rem;
   }
 }
 
 .hero {
   position: absolute;
   top: 161rem;
-  left: 172rem;
+  left: 140rem;
   width: 400rem;
   flex-shrink: 0;
   aspect-ratio: 400 / 482;
@@ -54,10 +54,9 @@
   @media (max-width: 767px) {
     position: relative;
     top: unset;
-    left: unset;
-    width: 264rem;
-    aspect-ratio: 264 / 318;
-    align-self: center;
+    left: 102rem;
+    width: 188.682rem;
+    aspect-ratio: 188.682 / 227.331;
   }
 }
 
@@ -95,7 +94,6 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  border: 1rem solid #E2E3E9;
   background-color: #E2E3E9;
 
   .item {
@@ -106,7 +104,7 @@
     cursor: pointer;
 
     @media (max-width: 767px) {
-      padding: 31rem 27rem;
+      padding: 25rem 27rem;
     }
 
     &.open {
@@ -130,7 +128,8 @@
   gap: 56rem;
 
   @media (max-width: 767px) {
-    gap: 20rem
+    gap: 20rem;
+    width: 100%;
   }
 
   &_lbl {
