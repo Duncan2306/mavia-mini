@@ -1,0 +1,1 @@
+import{R as t,j as n}from"./index-Ctmx0-v2.js";const o="_container_tqtfp_1",s={container:o},a=()=>n.jsx("div",{className:s.container,children:n.jsx("img",{src:"./images/diamond.png",alt:"diamond"})}),e=t.memo(a);export{e as D};
