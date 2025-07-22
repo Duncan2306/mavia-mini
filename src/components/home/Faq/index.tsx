@@ -9,7 +9,7 @@ import { NAVIGATION_SECTIONS } from '../../../constants/common'
 import styles from './Faq.module.scss'
 
 const Faq = () => {
-  const [open, setOpen] = useState<number | null>(0)
+  const [open, setOpen] = useState<number | null>(null)
 
   const { isMobile } = useWindowSize()
 

@@ -21,7 +21,7 @@ export function useScrollDirectionOnHover(element: string) {
     }
 
     const handleTouchStart = (e: TouchEvent) => {
-      e.preventDefault()
+      // e.preventDefault()
       touchStartY.current = e.touches[0].clientY
     }
 
@@ -42,7 +42,7 @@ export function useScrollDirectionOnHover(element: string) {
     }
 
     target.addEventListener('wheel', handleWheel, { passive: false })
-    target.addEventListener('touchstart', handleTouchStart, { passive: false })
+    target.addEventListener('touchstart', handleTouchStart, { passive: true })
     target.addEventListener('touchmove', handleTouchMove, { passive: false })
 
     return () => {

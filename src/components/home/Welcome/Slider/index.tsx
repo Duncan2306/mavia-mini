@@ -35,7 +35,7 @@ const MiniMaviaSlider = ({ isMobile }: { isMobile: boolean }) => {
         {LIST_SLIDE.map((item, index) => (
           <div key={index} className={styles.item}>
             {currentIndex !== index && <div className={styles.gradient} />}
-            <img src={item} alt={`Slide ${index + 1}`}
+            <img onClick={() => console.log('click')} src={item} alt={`Slide ${index + 1}`}
               className={clsx(styles.image)}
             />
           </div>
@@ -61,7 +61,7 @@ interface ArrowProps {
 }
 
 const CustomPrevArrow = (props: ArrowProps) => {
-  const { onClick = () => {} } = props
+  const { onClick = () => console.log('click') } = props
 
   return (
     <img
@@ -74,7 +74,7 @@ const CustomPrevArrow = (props: ArrowProps) => {
 }
 
 const CustomNextArrow = (props: ArrowProps) => {
-  const { onClick } = props
+  const { onClick = () => console.log('click') } = props
 
   return (
     <img
