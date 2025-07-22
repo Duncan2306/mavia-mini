@@ -20,10 +20,10 @@ export function useScrollDirectionOnHover(element: string) {
       }
     }
 
-    // const handleTouchStart = (e: TouchEvent) => {
-    //   e.preventDefault()
-    //   touchStartY.current = e.touches[0].clientY
-    // }
+    const handleTouchStart = (e: TouchEvent) => {
+      e.preventDefault()
+      touchStartY.current = e.touches[0].clientY
+    }
 
     const handleTouchMove = (e: TouchEvent) => {
       e.preventDefault()
@@ -42,12 +42,12 @@ export function useScrollDirectionOnHover(element: string) {
     }
 
     target.addEventListener('wheel', handleWheel, { passive: false })
-    // target.addEventListener('touchstart', handleTouchStart, { passive: false })
+    target.addEventListener('touchstart', handleTouchStart, { passive: false })
     target.addEventListener('touchmove', handleTouchMove, { passive: false })
 
     return () => {
       target.removeEventListener('wheel', handleWheel)
-      // target.removeEventListener('touchstart', handleTouchStart)
+      target.removeEventListener('touchstart', handleTouchStart)
       target.removeEventListener('touchmove', handleTouchMove)
     }
   }, [element])
