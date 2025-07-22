@@ -23,6 +23,7 @@ const MiniMaviaSlider = ({ isMobile }: { isMobile: boolean }) => {
     arrows: true,
     infinite: true,
     focusOnSelect: true,
+    swipe: !isMobile,
     afterChange: (index: number) => getIndex(index),
     nextArrow: <CustomNextArrow />,
     prevArrow: <CustomPrevArrow />
