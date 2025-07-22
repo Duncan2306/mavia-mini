@@ -17,6 +17,7 @@ const Features = () => {
   const [isLastVisible, setIsLastVisible] = useState(false)
   const [isFirstVisible, setIsFirstVisible] = useState(false)
   
+  // Tracking last item
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,6 +36,7 @@ const Features = () => {
     return () => observer.disconnect()
   }, [])
 
+  // Tracking first item
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
