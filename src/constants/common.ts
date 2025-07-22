@@ -5,3 +5,11 @@ export const BREAKPOINTS = {
   MD_MAX: 1023,
   LG_MIN: 1024,
 }
+
+export const NAVIGATION_SECTIONS = {
+  home: 'home',
+  partner: 'partner',
+  feature: 'feature',
+  gamePlay: 'game-play',
+  faq: 'faq',
+}

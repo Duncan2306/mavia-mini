@@ -2,12 +2,13 @@ import React from 'react'
 import clsx from 'clsx'
 
 import ContainerLayout from '../../../layout/container'
+import { NAVIGATION_SECTIONS } from '../../../constants/common'
 
 import styles from './BackedBy.module.scss'
 
 const BackedBy = () => {
   return (
-    <div id="partner" className={styles.container}>
+    <div id={NAVIGATION_SECTIONS.partner} className={styles.container}>
       <ContainerLayout className={styles.content}>
         <h2 className={styles.title}>Backed By</h2>
 

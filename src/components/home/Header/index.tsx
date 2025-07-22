@@ -2,6 +2,7 @@ import React, { useMemo } from 'react'
 
 import ContainerLayout from '../../../layout/container'
 import useWindowSize from '../../../hooks/useWindowSize'
+import { NAVIGATION_SECTIONS } from '../../../constants/common'
 
 import styles from './header.module.scss'
 
@@ -15,7 +16,7 @@ const Header = () => {
 
   return (
     <div
-      id="home"
+      id={NAVIGATION_SECTIONS.home}
       className={styles.container}
       style={{ background: `url(${bg}) no-repeat center / 100%` }}
       data-aos="zoom-out-down"

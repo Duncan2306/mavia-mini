@@ -1,7 +1,7 @@
 @use '../../styles/mixins/common' as *;
 
 .navigation {
-  border-bottom: 1px solid #E2E3E9;
+  border-bottom: 1x solid #E2E3E9;
   background: #FFF;
   backdrop-filter: blur(10rem);
   transition: all 0.2s ease;
@@ -71,12 +71,16 @@
     line-height: normal;
     transition: all 0.2s ease;
 
-    @media (min-width: 1440px) {
-      font-size: 14rem;
-    }
-
     &:hover {
       color: #209EFF;
+    }
+
+    &.active {
+      color: #209EFF;
+    }
+
+    @media (min-width: 1440px) {
+      font-size: 14rem;
     }
   }
 }

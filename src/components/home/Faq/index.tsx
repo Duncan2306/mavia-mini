@@ -4,6 +4,7 @@ import clsx from 'clsx'
 import ContainerLayout from '../../../layout/container'
 import { Expandable } from '../../shared/expandable/Expandable'
 import useWindowSize from '../../../hooks/useWindowSize'
+import { NAVIGATION_SECTIONS } from '../../../constants/common'
 
 import styles from './Faq.module.scss'
 
@@ -13,7 +14,7 @@ const Faq = () => {
   const { isMobile } = useWindowSize()
 
   return (
-    <div id="faq" className={styles.container}>
+    <div id={NAVIGATION_SECTIONS.faq} className={styles.container}>
       <img src="./images/home/faq/sticker.png" alt="sticker" className={styles.sticker} />
       <ContainerLayout className={styles.content}>
         {isMobile ? <h2 className={styles.faqBox_title}>FAQ</h2> : null}

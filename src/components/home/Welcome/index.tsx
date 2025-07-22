@@ -6,6 +6,7 @@ import { useScrollDirectionOnHover } from '../../../hooks/useScrollDirectionOnHo
 import Slider from './Slider'
 import Video from './Video'
 import useWindowSize from '../../../hooks/useWindowSize'
+import { NAVIGATION_SECTIONS } from '../../../constants/common'
 
 import styles from './Welcome.module.scss'
 
@@ -26,7 +27,7 @@ const Welcome = () => {
 
   return (
     <div
-      id="gameplay"
+      id={NAVIGATION_SECTIONS.gamePlay}
       className={styles.container}
       style={{ background: `url(${bg}) no-repeat center / 100%` }}
     >

@@ -7,6 +7,7 @@ import Section3 from './Section3'
 import Section4 from './Section4'
 import Section5 from './Section5'
 import Section6 from './Section6'
+import { NAVIGATION_SECTIONS } from '../../../constants/common'
 
 const Features = () => {
   const scrollRef = useRef<HTMLDivElement>(null)
@@ -53,7 +54,7 @@ const Features = () => {
   }, [])
 
   return (
-    <div id="features" className={styles.container}>
+    <div id={NAVIGATION_SECTIONS.feature} className={styles.container}>
       {isFirstVisible ? null : <img src="./images/scroll.png" alt="arrow" className={styles.scrollReverse} />}
       {isLastVisible ? null : <img src="./images/scroll.png" alt="arrow" className={styles.scrollTo} />}
 

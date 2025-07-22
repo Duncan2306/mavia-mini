@@ -1,7 +1,10 @@
+'use client'
+
 import React, { useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
 
 import ContainerLayout from '../../layout/container'
+import { NAVIGATION_SECTIONS } from '../../constants/common'
 
 import styles from './navigation.module.scss'
 
@@ -49,8 +52,8 @@ const Navigation = () => {
         </a>
 
         <ul className={styles.menu}>
-          {MENU.map((link) => (
-            <li key={link.label}>
+          {MENU?.map((link) => (
+            <li key={link.label} className={clsx({ [styles.active]: window?.location?.hash === link?.href })}>
               <a href={link.href}>{link.label}</a>
             </li>
           ))}
@@ -75,9 +78,9 @@ const Navigation = () => {
 export default React.memo(Navigation)
 
 const MENU = [
-  { label: 'Home', href: '#home' },
-  { label: 'Partner', href: '#partner' },
-  { label: 'Features', href: '#features' },
-  { label: 'Gameplay', href: '#gameplay' },
-  { label: 'FAQ', href: '#faq' }
+  { label: 'Home', href: `#${NAVIGATION_SECTIONS.home}` },
+  { label: 'Partner', href: `#${NAVIGATION_SECTIONS.partner}` },
+  { label: 'Features', href: `#${NAVIGATION_SECTIONS.feature}` },
+  { label: 'Gameplay', href: `#${NAVIGATION_SECTIONS.gamePlay}` },
+  { label: 'FAQ', href: `#${NAVIGATION_SECTIONS.faq}` }
 ]
