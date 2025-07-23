@@ -4,7 +4,7 @@ import ContainerLayout from '../../../layout/container'
 import useWindowSize from '../../../hooks/useWindowSize'
 import { NAVIGATION_SECTIONS } from '../../../constants/common'
 
-import styles from './header.module.scss'
+import styles from './Header.module.scss'
 
 const Header = () => {
   const { isMobile } = useWindowSize()
